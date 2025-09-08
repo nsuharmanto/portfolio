@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="bigBlur" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="120"/>
+    </filter>
+    
+    <radialGradient id="bottomGradU" cx="50%" cy="110%" r="180%" fx="50%" fy="110%">
+      <stop offset="0%" stop-color="#1a102b" stop-opacity="1"/>
+      <stop offset="0%" stop-color="#321752" stop-opacity="0.95"/>
+      <stop offset="80%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="topGradU" cx="66%" cy="0%" r="66%" fx="66%" fy="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#0a040cff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradasi ungu terang radial pojok kiri atas -->
+    <radialGradient id="topLeftBrightPurple" cx="8%" cy="8%" r="60%" fx="8%" fy="8%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#e0aaff" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#9338b2" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="5" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- Background dasar -->
+<rect width="100%" height="100%" fill="#0f0a16"/>
+
+<!-- Spot gelap ellipse di tepi atas posisi 2/3 lebar image -->
+<radialGradient id="topDarkEllipse" cx="66%" cy="0%" r="60%" fx="66%" fy="0%">
+  <stop offset="0%" stop-color="#000000" stop-opacity="1"/>
+  <stop offset="80%" stop-color="#321752" stop-opacity="1"/>
+  <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+</radialGradient>
+<ellipse cx="1500" cy="80" rx="1000" ry="400" fill="url(#topDarkEllipse)" opacity="1"/>
+  
+
+  <!-- Gradasi ungu terang radial pojok kiri atas -->
+  <ellipse cx="180" cy="120" rx="700" ry="500" fill="url(#topLeftBrightPurple)" opacity="1"/>
+  
+  <!-- Blob utama ungu -->
+  <ellipse cx="42%" cy="50%" rx="900" ry="500" fill="#9338b2" filter="url(#bigBlur)" opacity="0.9"/>
+  <!-- Blob pink kanan -->
+  <ellipse cx="68%" cy="35%" rx="750" ry="420" fill="#b44b9f" filter="url(#bigBlur)" opacity="0.7"/>
+  <!-- Blob peach kanan atas -->
+  <ellipse cx="90%" cy="10%" rx="520" ry="300" fill="#f6a18d" filter="url(#bigBlur)" opacity="0.9"/>
+  <!-- Blob ungu gelap kiri -->
+  <ellipse cx="15%" cy="28%" rx="550" ry="360" fill="#321752" filter="url(#bigBlur)" opacity="0.85"/>
+
+  <!-- Bentuk bawah U: path + radial gradient, kiri lebih tinggi -->
+  <path d="
+    M -200 1080
+    Q 200 400, 960 900
+    Q 1700 400, 2100 1080
+    Z
+  " fill="url(#bottomGradU)" filter="url(#bigBlur)" opacity="1"/>
+
+  <!-- Sudut kiri bawah gelap -->
+  <ellipse cx="0" cy="1080" rx="600" ry="700" fill="#1a102b" filter="url(#bigBlur)" opacity="0.9"/>
+  <!-- Sudut kanan bawah gelap -->
+  <ellipse cx="1920" cy="1080" rx="100" ry="200" fill="#1a102b" filter="url(#bigBlur)" opacity="0.9"/>
+  <!-- Tengah bawah gelap (lebih tebal) -->
+  <ellipse cx="960" cy="1120" rx="600" ry="180" fill="#1a102b" filter="url(#bigBlur)" opacity="0.85"/>
+  <ellipse cx="960" cy="1080" rx="500" ry="120" fill="#1a102b" filter="url(#bigBlur)" opacity="0.7"/>
+
+  <!-- Noise halus -->
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.02"/>
+</svg>
