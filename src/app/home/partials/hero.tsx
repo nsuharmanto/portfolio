@@ -358,7 +358,7 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
             />
 
             {/* Icon expert_fe */}
-            <div
+            {/* <div
               className='absolute right-[-14px] bottom-[-43px] z-40 md:right-[-55px] md:bottom-[-20px]'
               style={{
                 width: 'clamp(97px, 12vw, 120px)',
@@ -373,6 +373,58 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
                 className='h-full w-full'
                 priority
               />
+            </div> */}
+
+            <div
+              className='absolute right-[-130px] bottom-[-200px] z-40 flex items-center justify-center md:right-[-190px] md:bottom-[-205px]'
+              style={{
+                width: 'clamp(97px, 12vw, 120px)',
+                height: 'clamp(97px, 12vw, 120px)',
+                position: 'relative',
+              }}
+            >
+              {/* Animasi lingkaran teks+background */}
+              <motion.img
+                src='/icons/expert_fe_full.svg'
+                alt='Expert Frontend Circle'
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  zIndex: 2,
+                  pointerEvents: 'none',
+                }}
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
+                draggable={false}
+              />
+              {/* Icon globe di tengah */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  width: 'clamp(28px, 3vw, 34px)',
+                  height: 'clamp(28px, 3vw, 34px)',
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: 3,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  pointerEvents: 'none',
+                }}
+              >
+                <Image
+                  src='/icons/globe.svg'
+                  alt='Globe Icon'
+                  width={34}
+                  height={34}
+                  priority
+                  style={{ width: '100%', height: '100%', display: 'block' }}
+                />
+              </div>
             </div>
 
             {/* Icon star_light */}
