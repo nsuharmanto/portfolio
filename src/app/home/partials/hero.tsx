@@ -358,23 +358,6 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
             />
 
             {/* Icon expert_fe */}
-            {/* <div
-              className='absolute right-[-14px] bottom-[-43px] z-40 md:right-[-55px] md:bottom-[-20px]'
-              style={{
-                width: 'clamp(97px, 12vw, 120px)',
-                height: 'clamp(97px, 12vw, 120px)',
-              }}
-            >
-              <Image
-                src='/icons/expert_fe.svg'
-                alt='Expert Frontend Icon'
-                width={120}
-                height={120}
-                className='h-full w-full'
-                priority
-              />
-            </div> */}
-
             <div
               className='absolute right-[-130px] bottom-[-200px] z-40 flex items-center justify-center md:right-[-190px] md:bottom-[-205px]'
               style={{
