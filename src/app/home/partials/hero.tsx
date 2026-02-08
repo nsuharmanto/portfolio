@@ -343,7 +343,7 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
             }}
           >
             <Image
-              src='/images/me_ai.png'
+              src='/images/me_ai.svg'
               alt='Nura AI'
               fill
               sizes='(max-width: 600px) 319.18px, 383px'
@@ -411,12 +411,30 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
             </div>
 
             {/* Icon star_light */}
-            <div
+            <motion.div
               className='absolute right-[-13px] bottom-[325px] z-40 md:right-[-46px] md:bottom-[347px]'
               style={{
                 width: 'clamp(81px, 8vw, 126px)',
                 height: 'clamp(81px, 8vw, 126px)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
+              initial={{
+                scale: 0.85,
+                rotate: 0,
+                filter: 'drop-shadow(0px 0px 0px rgba(255,255,255,0))',
+              }}
+              animate={{
+                scale: [0.85, 1.15, 0.85],
+                rotate: [0, 5, -5, 0],
+                filter: [
+                  'drop-shadow(0px 0px 0px rgba(255,255,255,0))',
+                  'drop-shadow(0px 0px 24px rgba(255,255,255,0.85))',
+                  'drop-shadow(0px 0px 0px rgba(255,255,255,0))',
+                ],
+              }}
+              transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
             >
               <Image
                 src='/icons/star_light.svg'
@@ -428,9 +446,10 @@ const Hero = ({ showModal = false }: { showModal?: boolean }) => {
                 style={{
                   width: '100%',
                   height: 'auto',
+                  display: 'block',
                 }}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
 

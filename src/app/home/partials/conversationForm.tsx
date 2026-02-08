@@ -205,14 +205,15 @@ export default function ConversationForm() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className='flex h-[260px] w-full items-center justify-center bg-neutral-900 md:h-auto md:w-1/2'
+            className='flex h-[386px] w-full items-center justify-center bg-neutral-900 md:h-auto md:w-1/2'
+            
           >
             <Image
               src='/images/start_conversation.svg'
               alt='Start Conversation'
               width={420}
               height={420}
-              className='h-full w-full rounded-none object-cover md:h-[642px] md:rounded-l-2xl'
+              className='h-[386px] w-full rounded-none object-cover md:h-[642px] md:rounded-l-2xl'
               draggable={false}
               priority
             />

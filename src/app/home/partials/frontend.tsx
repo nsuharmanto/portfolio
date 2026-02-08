@@ -82,7 +82,7 @@ export default function Frontend() {
               viewport={{ once: true }}
               className="flex h-auto flex-1 flex-col items-center md:h-full"
             >
-              <div className="relative h-[260px] w-full overflow-hidden rounded-md border-1 border-gray-1000 bg-gradient-to-br from-[#18181c] to-[#23232b] shadow-2xl transition-all duration-300 hover:border-purple-900 hover:shadow-[0_0_20px_5px_rgba(169,63,168,0.3)] md:h-[80%]">
+              <div className="relative h-[361px] w-full overflow-hidden rounded-md border-1 border-gray-1000 bg-gradient-to-br from-[#18181c] to-[#23232b] shadow-2xl transition-all duration-300 hover:border-purple-900 hover:shadow-[0_0_20px_5px_rgba(169,63,168,0.3)] md:h-[80%]">
                 <Image
                   src={p.img}
                   alt={p.title}
